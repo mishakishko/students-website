@@ -1,7 +1,109 @@
-.body {
-    background-color:bisque;
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: darkslategray;
+    /* темний цианово-сірий */
+    color: white;
 }
 
-.navigation-panel {
-    background-color: darkgrey;
+.CMS-block {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Кнопки і ім'я користувача праворуч */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-button-ring,
+.header-button-profile {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.header-username {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Контейнер для sidebar і main-content */
+.container {
+    display: flex;
+}
+
+/* Sidebar вертикальний під хедером */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    width: 100px;
+    flex-shrink: 0;
+    /* не зменшується */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.sidebar a b {
+    font-weight: 700;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    /* займає весь доступний простір */
+    margin: 20px;
+}
+
+/* Students header (заголовок + кнопка) */
+.students-header {
+    display: flex;
+    justify-content: space-between;
+    /* кнопка праворуч */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.students-text {
+    margin: 2vw;
+}
+
+/* Кнопка + */
+.button-add {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 12px;
+}
+
+/* Таблиця */
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.students-table th {
+    background-color: #f0f0f0;
+}
+
+.students-table tr:hover {
+    background-color: #e0e0ff;
 }
