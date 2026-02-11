@@ -1,4 +1,3 @@
-
 body {
     background-color: bisque;
     margin: 0;
@@ -32,6 +31,7 @@ body {
     width: 32px;
     height: 32px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .header-username {
@@ -93,6 +93,10 @@ body {
     padding: 5px 12px;
 }
 
+.button-add:hover {
+    background-color: #fff347;
+}
+
 /* Таблиця */
 .students-table {
     width: 100%;
@@ -101,9 +105,9 @@ body {
 
 .students-table th,
 .students-table td {
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    text-align: left;
+    border: 2px solid #ccc;
+    padding: 7px 12px;
+    text-align: center;
 }
 
 .students-table th {
@@ -111,5 +115,5 @@ body {
 }
 
 .students-table tr:hover {
-    background-color: #e0e0ff;
+    background-color: #f0f0f0;
 }
