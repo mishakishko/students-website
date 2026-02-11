@@ -4,31 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <styles src="../styles/style.css"></styles>
-    <script src="../core/core.js"></script>
+    <title>Students</title>
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="icon" type="image/jpg" href="../images/photi.jpg">
+    <script src="../core/core.js" defer></script>
 </head>
 
 <body>
+    <!-- Header -->
+    <div class="header">
+        <div class="CMS-block">CMS</div>
+        <div class="header-right">
+            <img class="header-button-ring" src="../images/ring.jpg" alt="Ring">
+            <img class="header-button-profile" src="../images/profile-photo.jpg" alt="Profile">
+            <p class="header-username">Mykhailo Kishko</p>
+        </div>
+    </div>
 
+    <!-- Container для sidebar і main-content -->
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <div class="sidebar">
+            <a href="dashboard.html" title="Go to the main page">Dashboard</a>
+            <a href="students.html" title="See the list of students"><b>Students</b></a>
+            <a href="statictics.html" title="See the analytics">Statictics</a>
+        </div>
 
-    <div class="navigation-panel">
-        <a href="dashboard.html" title="Go to the main page">
-            <p>
-                <i>
-                    <b>
-                        Dashboard
-                    </b>
-                </i>
-            </p>
-        </a>
-        <a href="students.html" title="See the list of students">
-            <p>Students</p>
-        </a>
-        <a href="statictics.html" title="See the analytics">
-            <p>Statictics</p>
-        </a>
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="students-header">
+                <h2 class="students-text">Students</h2>
+                <button class="button-add">+</button>
+            </div>
+
+            <table class="students-table">
+                <tr>
+                    <th>Checked</th>
+                    <th>Group</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                    <th>Status</th>
+                    <th>Options</th>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 
