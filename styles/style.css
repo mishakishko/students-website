@@ -117,3 +117,102 @@ body {
 .students-table tr:hover {
     background-color: #f0f0f0;
 }
+
+.gender-form {
+    height:20px;
+}
+
+.modal {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.modal-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-row label {
+    width: 120px;
+    /* фіксована ширина для лейблу */
+    font-weight: 500;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    /* input займає решту рядка */
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    /* розносить header і кнопку в різні боки */
+    align-items: center;
+    /* вирівнює по вертикалі */
+    margin-bottom: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    /* робимо flex-контейнер */
+        justify-content: flex-end;
+        /* вирівнюємо елементи вправо */
+        gap: 10px;
+        /* відстань між кнопками */
+        margin-top: 15px;
+}
+
+.header-button-ring,
+.header-button-profile {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    /* прибираємо внутрішній відступ кнопки */
+    border: none;
+    /* прибираємо рамку кнопки */
+    background: none;
+    /* прибираємо фон кнопки */
+    border-radius: 50%;
+    /* робимо круглими */
+    cursor: pointer;
+    overflow: hidden;
+    /* щоб зображення не виступало за межі */
+}
+
+.header-button-ring img,
+.header-button-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* щоб зображення заповнювало круг */
+}

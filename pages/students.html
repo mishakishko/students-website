@@ -15,8 +15,13 @@
     <div class="header">
         <div class="CMS-block">CMS</div>
         <div class="header-right">
-            <img class="header-button-ring" src="../images/ring.jpg" alt="Ring">
-            <img class="header-button-profile" src="../images/profile-photo.jpg" alt="Profile">
+            <button class="header-button-ring">
+                <img src="../images/ring.jpg" alt="Ring">
+            </button>
+            <button class="header-button-profile">
+                <img src="../images/profile-photo.jpg" alt="Profile">
+            </button>
+            
             <p class="header-username">Mykhailo Kishko</p>
         </div>
     </div>
@@ -34,7 +39,7 @@
         <div class="main-content">
             <div class="students-header">
                 <h2 class="students-text">Students</h2>
-                <button class="button-add">+</button>
+                <button class="button-add" onclick="openModal()">+</button>
             </div>
 
             <table class="students-table">
@@ -49,6 +54,58 @@
                 </tr>
             </table>
         </div>
+    </div>
+
+    <div id="add-student-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add student</h2>
+                <button class="modal-close-button" onclick="closeModal()">x</button>
+            </div>
+           
+        
+        <div class="modal-forms">
+            <div class="form-row">
+                <label for="first-name-form">First name</label>
+                <input id="first-name-form" placeholder="Mykhailo">
+            </div>
+
+            <div class="form-row">
+                <label for="last-name-form">Last name</label>
+                <input id="last-name-form" placeholder="Kishko">
+            </div>
+
+            <div class="form-row">
+                <label for="group-form">Group</label>
+                <select id="group-form">
+                    <option>PZ-21</option>
+                    <option>PZ-22</option>
+                    <option>PZ-23</option>
+                    <option>PZ-24</option>
+                    <option>PZ-25</option>
+                    <option>PZ-26</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="gender-form">Gender</label>
+                <select id="gender-form" id="gender-form">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label for="birthday-form">Birthday</label>
+                <input id="birthday-form" type="date" placeholder="dd/mm/yyyy"></input>
+            </div> 
+        </div>
+      
+       <div class="modal-footer">
+        <button id="modal-ok-button">Create</button>
+        <button id="modal-cancel-button">Cancel</button>
+       </div>
+    </div>
     </div>
 </body>
 
