@@ -6,107 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="icon" type="image/jpg" href="../images/icon.jpg">
-    <script src="../core/core.js" defer></script>
+    <script src="../core/core.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=XKedzxVhRNPR&format=png&color=000000">
 </head>
 
 <body>
-    <!-- Header -->
+
     <div class="header">
         <div class="CMS-block">CMS</div>
         <div class="header-right">
-            <button class="header-button-ring">
-                <img src="../images/ring.jpg" alt="Ring">
-            </button>
+            <div class="header-item">
+                <button class="header-button-bell">
+                    <img src="../images/bell.jpg" alt="Bell">
+                </button>
+                <div id="notification" class="notification-text"></div>
+            </div>
             <button class="header-button-profile">
-                <img src="../images/profile-photo.jpg" alt="Profile">
+                <img src="https://img.icons8.com/?size=100&id=17995&format=png&color=000000" alt="Profile">
             </button>
-            
             <p class="header-username">Mykhailo Kishko</p>
         </div>
     </div>
 
-    <!-- Container для sidebar і main-content -->
     <div class="container">
-        <!-- Sidebar navigation -->
         <div class="sidebar">
-            <a href="dashboard.html" title="Go to the main page">Dashboard</a>
-            <a href="students.html" title="See the list of students"><u><b><i>Students</i></b></u></a>
-            <a href="statictics.html" target="_blank" title="See the analytics">Statictics</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="students.html"><u><i><b>Students</b></i></u></a>
+            <a href="statistics.html" target="_blank">Statistics</a>
         </div>
 
-        <!-- Main content -->
         <div class="main-content">
+
             <div class="students-header">
-                <h2 class="students-text">Students</h2>
+                <h2>Students</h2>
                 <button class="button-add" onclick="openModal()">+</button>
             </div>
 
             <table class="students-table">
-                <tr>
-                    <th>Checked</th>
-                    <th>Group</th>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Birthday</th>
-                    <th>Status</th>
-                    <th>Options</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="select-all" onclick="toggleAllStudents(this)"></th>
+                        <th>Group</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Birthday</th>
+                        <th>Status</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="students-table-body"></tbody>
             </table>
+
         </div>
     </div>
 
+    <!-- Modal -->
     <div id="add-student-modal" class="modal">
         <div class="modal-content">
+
             <div class="modal-header">
                 <h2>Add student</h2>
-                <button class="modal-close-button" onclick="closeModal()">x</button>
-            </div>
-           
-        
-        <div class="modal-forms">
-            <div class="form-row">
-                <label for="first-name-form">First name</label>
-                <input id="first-name-form" placeholder="Mykhailo">
+                <button class="modal-close-button" onclick="closeModal()">&times;</button>
             </div>
 
-            <div class="form-row">
-                <label for="last-name-form">Last name</label>
-                <input id="last-name-form" placeholder="Kishko">
+            <div class="modal-forms">
+                <div class="form-row">
+                    <label>First name</label>
+                    <input id="first-name-form">
+                </div>
+                <div class="form-row">
+                    <label>Last name</label>
+                    <input id="last-name-form">
+                </div>
+                <div class="form-row">
+                    <label>Group</label>
+                    <select id="group-form">
+                        <option value="">Select group</option>
+                        <option>PZ-21</option>
+                        <option>PZ-22</option>
+                        <option>PZ-23</option>
+                        <option>PZ-24</option>
+                        <option>PZ-25</option>
+                        <option>PZ-26</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Gender</label>
+                    <select id="gender-form">
+                        <option value="">Select gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Birthday</label>
+                    <input id="birthday-form" type="date">
+                </div>
             </div>
 
-            <div class="form-row">
-                <label for="group-form">Group</label>
-                <select id="group-form">
-                    <option>PZ-21</option>
-                    <option>PZ-22</option>
-                    <option>PZ-23</option>
-                    <option>PZ-24</option>
-                    <option>PZ-25</option>
-                    <option>PZ-26</option>
-                </select>
+            <div class="modal-footer">
+                <button onclick="addStudent()">Create</button>
+                <button onclick="cancelStudent()">Cancel</button>
             </div>
 
-            <div class="form-row">
-                <label for="gender-form">Gender</label>
-                <select id="gender-form" id="gender-form">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-            </div>
-            
-            <div class="form-row">
-                <label for="birthday-form">Birthday</label>
-                <input id="birthday-form" type="date" placeholder="dd/mm/yyyy"></input>
-            </div> 
         </div>
-      
-       <div class="modal-footer">
-        <button id="modal-ok-button">Create</button>
-        <button id="modal-cancel-button">Cancel</button>
-       </div>
     </div>
-    </div>
+
 </body>
 
 </html>
