@@ -39,7 +39,7 @@ JavaScript (ES6+): DOM manipulation, event handling, and interval-based logic fo
 📂 Project structure
 Based on the file paths in the code, the recommended project structure is:
 
-Plaintext
+```text
 project-root/
 │
 ├── pages/
@@ -58,7 +58,7 @@ project-root/
 │   └── core.js             # Shared core scripts
 │
 └── README.md               # Project documentation
-
+```
 🚀 How to run
 Clone or Download the repository to your local machine.
 
