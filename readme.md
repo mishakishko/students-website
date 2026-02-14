@@ -43,9 +43,9 @@ Based on the file paths in the code, the recommended project structure is:
 project-root/
 │
 ├── pages/
-│   ├── students.html       # (Linked in sidebar)
-│   ├── dashboard.html      # Main application file
-│   └── statistics.html    
+│   ├── students.html        # Main application file
+│   ├── dashboard.html       # (Linked in sidebar)
+│   └── statistics.html      # (Linked in sidebar)
 │
 ├── styles/
 │   └── style.css           # Global styles and layout
